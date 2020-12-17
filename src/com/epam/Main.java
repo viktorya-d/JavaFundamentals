@@ -7,6 +7,6 @@ public class Main {
     public static void main(String[] args) {
         OptionalTask optionalTask = new OptionalTask();
 
-        optionalTask.orderNumber();
+        optionalTask.differentNumberInEach();
     }
 }

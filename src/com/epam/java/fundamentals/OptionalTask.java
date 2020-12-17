@@ -1,9 +1,6 @@
 package com.epam.java.fundamentals;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class OptionalTask {
 
@@ -70,6 +67,21 @@ public class OptionalTask {
     }
 
     public void differentNumberInEach() {
-
+        int minAmount = numbers.get(0).length();
+        String minNumber = numbers.get(0);
+        for (String str : numbers) {
+            List<Integer> integers = new ArrayList<>();
+            for (Character c : str.toCharArray()) {
+                Integer i = Integer.valueOf(c);
+                if (!integers.contains(i)) {
+                    integers.add(i);
+                }
+            }
+            if (minAmount > integers.size()) {
+                minAmount = integers.size();
+                minNumber = str;
+            }
+        }
+        System.out.println("Min number is " + minNumber);
     }
 }
